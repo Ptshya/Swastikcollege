@@ -178,14 +178,31 @@
   <div id="page-about" class="page-view">
     <section style="padding:70px 0;">
       <div class="wrap">
-        <div class="about-block">
-          <span class="mono" style="color:var(--code); font-size:0.85rem;">// ABOUT US</span>
-          <h1 style="font-size:2.4rem; margin:10px 0 20px;">Welcome to Swastik College</h1>
-          <p style="font-size:1.05rem; margin-bottom:16px;">Swastik College, the School of Computer Science and Application, was founded in 2013 by the team of academicians and young entrepreneurs. It is located at Chardobato, Gattaghar, Bhaktapur. Currently Swastik College is running Bachelor of Science in Computer Science and Information Technology (B.Sc CSIT) and Bachelor of Arts in Computer Application (BCA).</p>
-          <p style="font-size:1.05rem; margin-bottom:16px; font-weight:500; color:var(--maroon);">From 2019, F1Soft has invested in Swastik College to produce highly competent IT professionals from Swastik College and to fulfill the gap between IT education and IT industries.</p>
-          <p style="font-size:1.02rem; color:#4a5163;">It was established for the sole purpose of facilitating students' progression, both academic and practical, by developing knowledge, key skill sets and the capacity for independent and lifelong learning. We believe in building students' intelligence, ingenuity, inventiveness and independence as well as communication skills. The Swastik College put conscious effort to foster students' endeavors in pursuit of developing their problem solving skills and expertise.</p>
-        </div>
+        
+        <!-- NEW GRID WRAPPER FOR TEXT AND IMAGES -->
+        <div class="about-layout">
+          
+          <!-- LEFT SIDE: Text -->
+          <div class="about-block" style="border: none; padding: 0;">
+            <span class="mono" style="color:var(--code); font-size:0.85rem;">// ABOUT US</span>
+            <h1 style="font-size:2.4rem; margin:10px 0 20px;">Welcome to Swastik College</h1>
+            <p style="font-size:1.05rem; margin-bottom:16px;">Swastik College, the School of Computer Science and Application, was founded in 2013 by the team of academicians and young entrepreneurs. It is located at Chardobato, Gattaghar, Bhaktapur. Currently Swastik College is running Bachelor of Science in Computer Science and Information Technology (B.Sc CSIT) and Bachelor of Arts in Computer Application (BCA).</p>
+            <p style="font-size:1.05rem; margin-bottom:16px; font-weight:500; color:var(--maroon);">From 2019, F1Soft has invested in Swastik College to produce highly competent IT professionals from Swastik College and to fulfill the gap between IT education and IT industries.</p>
+            <p style="font-size:1.02rem; color:#4a5163;">It was established for the sole purpose of facilitating students' progression, both academic and practical, by developing knowledge, key skill sets and the capacity for independent and lifelong learning. We believe in building students' intelligence, ingenuity, inventiveness and independence as well as communication skills. The Swastik College put conscious effort to foster students' endeavors in pursuit of developing their problem solving skills and expertise.</p>
+          </div>
 
+          <!-- RIGHT SIDE: 3-Image Zigzag Collage -->
+          <div class="about-collage reveal from-right">
+            <!-- Replace these placeholder filenames with your actual images -->
+            <img src="your-image-1.jpg" alt="Swastik Campus 1" class="img-1">
+            <img src="your-image-2.jpg" alt="Swastik Campus 2" class="img-2">
+            <img src="your-image-3.jpg" alt="Swastik Campus 3" class="img-3">
+          </div>
+
+        </div>
+        <!-- END OF GRID WRAPPER -->
+
+        <!-- Vision and Mission Blocks -->
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:30px; margin:40px 0;">
           <div style="background:#fff; border:1px solid var(--line); padding:30px; border-radius:6px;" class="reveal from-left">
             <h2 style="color:var(--maroon); margin-bottom:12px;">Vision</h2>
@@ -200,7 +217,9 @@
             </ul>
           </div>
         </div>
-
+      </div>
+    </section>
+  </div>
         <div class="about-block">
           <h2>Message From Management Team</h2>
           <div style="display:grid; grid-template-columns:1fr 1fr; gap:30px; margin-top:20px;">
