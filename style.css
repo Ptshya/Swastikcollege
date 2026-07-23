@@ -54,6 +54,10 @@
   nav .wrap{display:flex; align-items:center; justify-content:space-between; height:74px;}
   .brand{display:flex; align-items:center; gap:12px; font-family:'Fraunces',serif; font-weight:700; font-size:1.25rem; color:var(--maroon); position:relative;}
   .brand.glitch:hover span{animation:glitch 0.35s steps(2) 2;}
+.brand img {
+    max-height: 40px; /* Change this number to make it bigger or smaller */
+    width: auto;      /* Keeps the image from stretching out of proportion */
+  }
   @keyframes glitch{
     0%{ text-shadow: 2px 0 var(--code), -2px 0 var(--maroon-bright); transform:translate(0,0);}
     50%{ text-shadow: -2px 0 var(--code), 2px 0 var(--maroon-bright); transform:translate(-1px,1px);}
