@@ -201,7 +201,7 @@
   }
   
   .about-collage img {
-    width: 65%; /* Leaves room for the zigzag movement */
+    width: 45%; /* Leaves room for the zigzag movement */
     aspect-ratio: 4 / 3; /* Keeps all 3 images uniform */
     object-fit: cover;
     border-radius: 16px; /* Rounded corners */
