@@ -181,7 +181,7 @@
   /* About / Sister Cards */
   .about-block{padding:40px 0; border-bottom:1px solid var(--line);}
   .message-card{background:#fff; border:1px solid var(--line); padding:28px; border-radius:6px; margin-top:20px;}
-  .sister-grid{display:grid; grid-template-columns:1fr 1fr; gap:30px;}
+  .sister-grid{display:grid; grid-template-columns:1fr 1fr; gap:30px; margin-left: 6%; margin-right: 6%;}
   .sister-card{background:#fff; border:1px solid var(--line); border-radius:6px; padding:0; position:relative; transition:transform .3s ease, box-shadow .3s ease; overflow:hidden;}
   .sister-card:hover{transform:translateY(-6px); box-shadow:0 30px 50px -28px rgba(28,35,51,0.3);}
   .sister-card .chrome{display:flex; gap:6px; padding:10px 16px; background:var(--paper-2); border-bottom:1px solid var(--line);}
