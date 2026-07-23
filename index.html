@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swastik College — School of Computer Science & Application</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="progress"></div>
+<canvas id="matrix-canvas"></canvas>
+<div class="ring" id="ring"></div>
+
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="wrap">
+    <a href="#home" class="brand glitch"><span>🦢 Swastik College</span></a>
+    <div class="navlinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#programs">Programs</a>
+      <a href="#notices">Notices</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#downloads">Downloads</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <button id="hack-toggle" class="mono" title="Toggle hack mode">// hack_mode</button>
+      <a href="#contact" class="nav-cta">Apply for Programme</a>
+    </div>
+  </div>
+</nav>
+
+<div class="ticker">
+  <div class="ticker-track">
+    <span class="accent">●</span><span>ADMISSION OPEN FOR 2026</span>
+    <span class="accent">●</span><span>B.Sc. CSIT &amp; BCA — AFFILIATED TO TU</span>
+    <span class="accent">●</span><span>PARTNERED WITH F1SOFT &amp; ESEWA</span>
+    <span class="accent">●</span><span>ADMISSION OPEN FOR 2026</span>
+    <span class="accent">●</span><span>WEBSITE BUILDING COMPETITION — WINNER PRIZE NRS. 25,000</span>
+  </div>
+</div>
+
+<main id="app">
+
+  <!-- PAGE: HOME -->
+  <div id="page-home" class="page-view active">
+    <header class="hero">
+      <svg class="swan-bg" viewBox="0 0 100 100" fill="none">
+        <path d="M10 70c10-30 36-52 68-48-8 14-8 24 4 32-16 4-28 0-36-12-4 14 4 24 20 28-20 8-42 8-56 0z" stroke="#7E1F3A" stroke-width="1.2"/>
+      </svg>
+      <div class="wrap hero-inner">
+        <div>
+          <div class="eyebrow">Affiliated to Tribhuvan University</div>
+          <h1>Where Bhaktapur's<br><em>next engineers</em><br>start compiling.</h1>
+          <p class="lede">B.Sc. CSIT and BCA in Chardobato, Thimi — built on lab hours, industry placement, and a direct line to Nepal's fintech floor.</p>
+          <div class="hero-ctas">
+            <a href="#programs" class="btn-primary">View Programs</a>
+            <a href="#contact" class="btn-ghost">Talk to Admissions</a>
+          </div>
+          <div class="stat-row">
+            <div><strong class="counter" data-target="2700" data-suffix="+">0</strong><span>Community</span></div>
+            <div><strong class="counter" data-target="4">0</strong><span>Years · 8 Semesters</span></div>
+            <div><strong class="counter" data-target="100" data-suffix="%">0</strong><span>Job Placement</span></div>
+          </div>
+        </div>
+        <div class="terminal">
+          <div class="bar">
+            <div class="dots"><span></span><span></span><span></span></div>
+            <span class="label">swastik@admissions:~</span>
+          </div>
+          <div id="term-output"><span class="prompt">$</span> whoami
+<span class="out">swastik_student</span>
+<span class="prompt">$</span> cat mission.txt
+<span class="out">Bringing excellence to students.</span>
+<span class="prompt">$</span> ./placement --rate
+<span class="out">100% job placement</span></div>
+          <div class="term-input-row">
+            <span class="prompt">$</span>
+            <input id="term-input" type="text" placeholder="try: help" autocomplete="off" spellcheck="false">
+            <span class="caret"></span>
+          </div>
+        </div>
+      </div>
+      <div class="diagonal-band">
+        <div class="diagonal-band-track">
+          <span>★ ADMISSION OPEN FOR 2025</span>
+          <span>★ BRINGING EXCELLENCE TO STUDENTS</span>
+          <span>★ PARTNERED WITH F1SOFT &amp; ESEWA</span>
+          <span>★ ADMISSION OPEN FOR 2025</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- TAKE A TOUR VIDEO SECTION -->
+    <section class="tour-section">
+      <div class="wrap tour-grid">
+        <div class="video-container reveal from-left">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Why F1Soft and eSewa are in Swastik College" allowfullscreen></iframe>
+        </div>
+        <div class="tour-content reveal from-right">
+          <h4>Take a tour</h4>
+          <h2>Why F1Soft and eSewa are in Swastik College ???</h2>
+          <p style="color:#4a5163; margin-bottom:16px;">Swastik college is one of the best IT colleges in Nepal. It offers BCA and B.Sc. CSIT, 4 years - 8 semesters, courses affiliated to TU. This college has recently partnered with F1Soft group of companies including eSewa.</p>
+          <p style="color:#4a5163;">Apart from high quality regular classes, Swastik college provide extra professional training, workshops, and 100% Job placement to its IT students. This college is moving towards as best CSIT college in Nepal as well as best BCA college in Nepal.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section style="padding:60px 0 0;">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="code-label">// <b>01</b> — why_swastik()</span>
+          <h2>Academics, wired to industry.</h2>
+        </div>
+      </div>
+      <div class="why-grid wrap">
+        <div class="why-item reveal from-left">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+          <h3>Industry &amp; Student Interaction</h3><p>Direct exposure to real-world practice alongside academic depth.</p>
+        </div>
+        <div class="why-item reveal from-right">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 9h8M8 13h5"/></svg>
+          <h3>Research &amp; Training Facility</h3><p>Well-equipped labs built for hands-on, applied learning.</p>
+        </div>
+        <div class="why-item reveal from-left">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3v18M5 8l7-5 7 5M5 8v9l7 5 7-5V8"/></svg>
+          <h3>Internship Pipeline</h3><p>Structured internships that lead directly into placement.</p>
+        </div>
+        <div class="why-item reveal from-right">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+          <h3>Job Placement</h3><p>100% placement support backed by real partner companies.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLACEMENT PARTNERS -->
+    <section class="partners-light">
+      <div class="wrap reveal from-left">
+        <h2>Our <span>Placement Partners</span></h2>
+        <div class="logo-row">
+          <div class="logo-card">
+            <div class="f1soft-logo">f1<span>soft</span></div>
+          </div>
+          <div class="logo-card">
+            <div class="esewa-logo">e-</div>
+          </div>
+          <div class="logo-card">
+            <div class="mega-logo">M MEGA<span>BANK NEPAL LIMITED</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="partners-dark">
+      <div class="wrap reveal from-right">
+        <h3>Trusted by Nepal's fintech leaders — Swastik partners with F1Soft Group, including eSewa, for training, workshops, and placement.</h3>
+        <div style="display:flex; gap:12px;">
+          <span class="mono" style="border:1px solid rgba(255,255,255,0.2); padding:8px 16px;">F1Soft Group</span>
+          <span class="mono" style="border:1px solid rgba(255,255,255,0.2); padding:8px 16px;">eSewa</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PAGE: ABOUT -->
+  <div id="page-about" class="page-view">
+    <section style="padding:70px 0;">
+      <div class="wrap">
+        <div class="about-block">
+          <span class="mono" style="color:var(--code); font-size:0.85rem;">// ABOUT US</span>
+          <h1 style="font-size:2.4rem; margin:10px 0 20px;">Welcome to Swastik College</h1>
+          <p style="font-size:1.05rem; margin-bottom:16px;">Swastik College, the School of Computer Science and Application, was founded in 2013 by the team of academicians and young entrepreneurs. It is located at Chardobato, Gattaghar, Bhaktapur. Currently Swastik College is running Bachelor of Science in Computer Science and Information Technology (B.Sc CSIT) and Bachelor of Arts in Computer Application (BCA).</p>
+          <p style="font-size:1.05rem; margin-bottom:16px; font-weight:500; color:var(--maroon);">From 2019, F1Soft has invested in Swastik College to produce highly competent IT professionals from Swastik College and to fulfill the gap between IT education and IT industries.</p>
+          <p style="font-size:1.02rem; color:#4a5163;">It was established for the sole purpose of facilitating students' progression, both academic and practical, by developing knowledge, key skill sets and the capacity for independent and lifelong learning. We believe in building students' intelligence, ingenuity, inventiveness and independence as well as communication skills. The Swastik College put conscious effort to foster students' endeavors in pursuit of developing their problem solving skills and expertise.</p>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:30px; margin:40px 0;">
+          <div style="background:#fff; border:1px solid var(--line); padding:30px; border-radius:6px;" class="reveal from-left">
+            <h2 style="color:var(--maroon); margin-bottom:12px;">Vision</h2>
+            <p>To transform the college into the hub of Computer Science and Information Technology both in theory and practice in pursuit of knowledge to the next generation and to advance as internationally recognized academic institutions.</p>
+          </div>
+          <div style="background:#fff; border:1px solid var(--line); padding:30px; border-radius:6px;" class="reveal from-right">
+            <h2 style="color:var(--maroon); margin-bottom:12px;">Mission</h2>
+            <ul style="padding-left:18px;">
+              <li>To build a center of academic excellence through advanced theories and practices.</li>
+              <li>To produce competent professionals and entrepreneurs through innovative, creative and value based academic practices.</li>
+              <li>To develop as a R&amp;D and incubation center for fostering IT innovations based quality research output.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="about-block">
+          <h2>Message From Management Team</h2>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:30px; margin-top:20px;">
+            <div class="message-card reveal from-left">
+              <h3 style="color:var(--maroon);">Message from Chairperson</h3>
+              <p style="margin-top:10px; font-size:0.95rem; color:#4a5163;">"At Swastik College, our endeavor is to bridge the gap between academic theory and real-world tech industry execution. With our F1Soft partnership, we ensure every student gains exposure to production-grade engineering practices."</p>
+            </div>
+            <div class="message-card reveal from-right">
+              <h3 style="color:var(--maroon);">Message from Director</h3>
+              <p style="margin-top:10px; font-size:0.95rem; color:#4a5163;">"Education is no longer just about passing university exams; it is about building products that solve society's problems. Welcome to a dynamic environment built by coders, for coders."</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="about-block" style="border-bottom:none;">
+          <h2>Sister Institutes</h2>
+          <p style="margin-bottom:20px; color:#4a5163;">Part of the Nepal MEGA family.</p>
+          <div class="sister-grid">
+            <div class="sister-card reveal from-left">
+              <div class="chrome"><span></span><span></span><span></span></div>
+              <div class="body">
+                <span class="est">Est. 2011</span>
+                <h3>Nepal Mega College</h3>
+                <p>Founded by an experienced team of teachers and entrepreneurs, MEGA College has a long record in board results and competitive exam success across medicine, engineering, and management.</p>
+              </div>
+            </div>
+            <div class="sister-card reveal from-right">
+              <div class="chrome"><span></span><span></span><span></span></div>
+              <div class="body">
+                <span class="est">Kathmandu</span>
+                <h3>Nepal Mega School</h3>
+                <p>A leading school in Nepal built to provide quality education at affordable cost, within an open, caring, multi-cultural learning environment.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <!-- PAGE: PROGRAMS OVERVIEW -->
+  <div id="page-programs" class="page-view">
+    <section class="programs">
+      <div class="wrap">
+        <h1 style="font-size:2.4rem; margin-bottom:30px;">Academic Programs</h1>
+        <div class="prog-grid">
+          <div class="prog-card reveal from-left">
+            <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+            <div class="prog-visual csit">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#FAF5EC" stroke-width="1.4" style="width:76px; height:76px; opacity:0.92;">
+                <rect x="3" y="4" width="18" height="12" rx="1"/>
+                <path d="M8 20h8M12 16v4"/>
+                <path d="M7 9l2 2-2 2M13 13h4"/>
+              </svg>
+            </div>
+            <div class="prog-body">
+              <span class="tag">4 Years · 8 Semesters</span>
+              <h3>B.Sc. CSIT</h3>
+              <p>Bachelor of Science in Computer Science and Information Technology — the deep end of algorithms, systems, and software engineering, affiliated to TU.</p>
+              <a href="#csit">Read Full Syllabus &amp; Details →</a>
+            </div>
+          </div>
+          <div class="prog-card reveal from-right">
+            <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+            <div class="prog-visual bca">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#FAF5EC" stroke-width="1.4" style="width:76px; height:76px; opacity:0.92;">
+                <path d="M12 3l9 4.5-9 4.5-9-4.5L12 3z"/>
+                <path d="M5 10v5c0 1.5 3 3.5 7 3.5s7-2 7-3.5v-5"/>
+              </svg>
+            </div>
+            <div class="prog-body">
+              <span class="tag">4 Years · 8 Semesters</span>
+              <h3>BCA</h3>
+              <p>Bachelor in Computer Applications — application development, business systems, and the practical craft of software delivery.</p>
+              <a href="#bca">Read Full Syllabus &amp; Details →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- DEDICATED PAGE: B.Sc. CSIT -->
+  <div id="page-csit" class="page-view">
+    <div class="wrap program-detail-layout">
+      <div class="program-main-content">
+        <h1>Bachelor of Science in Computer Science &amp; Information Technology (B.Sc. CSIT)</h1>
+        <p>Bachelor of Science in Computer Science &amp; Information Technology (B.Sc. CSIT) is a 4-year, 8-semester course provided by Tribhuvan University, Nepal. With a total of 126 credit hours, the course is designed to provide students with all round knowledge in the field of Computing and Information Technology. Curriculum-wise, the course is regarded as one of the best amongst IT related courses that have been introduced ever in Nepal.</p>
+        <p>The program is designed to explore underlying principles of both computer and information technology and to enable the students to apply these principles into the real world problems. It develops skills among the students that are essential for both computer professionals and IT specialists. The course consists of 126 credit hours with 75 credit hours for core computer science course.</p>
+
+        <h2>Program Features</h2>
+        <ul class="feature-list">
+          <li>4 years (8-semester) course designed and prescribed by TU.</li>
+          <li>Highly recognized by national and international IT companies.</li>
+          <li>Internship of 9 credit hours during 4 years of college.</li>
+          <li>Elective courses from 1st semester for the program.</li>
+          <li>Appropriately designed course for programming skill, networking skill, knowledge of data administration and completion of IT projects.</li>
+          <li>100% job placement for the deserving students.</li>
+          <li>Market oriented certified course such as PHP, CCNA, JAVA, Android Apps Development etc.</li>
+          <li>Regular guest lecture from highly recognized IT experts, IT entrepreneurs and reputed academicians.</li>
+        </ul>
+
+        <h2>Eligibility Criteria</h2>
+        <ul class="feature-list">
+          <li>Should have successfully completed twelve years of schooling in the science stream or equivalent from any university, board or institution recognized by TU.</li>
+          <li>Should have secured a minimum second division/C grade in each subject.</li>
+          <li>Should have successfully passed the entrance examination conducted by TU securing at least 35% marks.</li>
+        </ul>
+      </div>
+
+      <!-- SIDE INQUIRY FORM -->
+      <div>
+        <div class="side-inquiry-card reveal from-right">
+          <h3>Quick Admission Inquiry</h3>
+          <form onsubmit="alert('Thank you! We will contact you soon.'); return false;">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="Your Phone Number" required>
+            </div>
+            <div class="form-group">
+              <label>Program Interested</label>
+              <input type="text" value="B.Sc. CSIT" readonly style="background:#f1f1f1;">
+            </div>
+            <div class="form-group">
+              <label>Your Message</label>
+              <textarea rows="3" placeholder="Inquire about admission, fee..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary" style="width:100%; border:none; cursor:pointer;">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DEDICATED PAGE: BCA -->
+  <div id="page-bca" class="page-view">
+    <div class="wrap program-detail-layout">
+      <div class="program-main-content">
+        <h1>Bachelor of Arts in Computer Application (BCA)</h1>
+        <p>Bachelor of Arts in Computer Application (BCA) is a 4-year, 8-semester course provided by Tribhuvan University, Nepal. It is a full-time course of 126 minimum credit hours and students from any faculty can join this program with minimum eligibility criteria as prescribed by TUFOHSS. Upon completion of all requirements as prescribed in the curriculum, the degree is awarded by Dean Office of the Faculty of Humanities and Social Sciences (Tribhuvan University).</p>
+
+        <h2>BCA Course Structure</h2>
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>Courses</th>
+              <th>Credit Hours</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Computer Application (Core courses)</td><td>71</td></tr>
+            <tr><td>Social Science and Management Courses</td><td>15</td></tr>
+            <tr><td>Project and Internships</td><td>13</td></tr>
+            <tr><td>Elective Courses</td><td>12</td></tr>
+            <tr><td>Mathematics and Statistics Courses</td><td>9</td></tr>
+            <tr><td>Language Course</td><td>6</td></tr>
+            <tr style="font-weight:bold; background:var(--paper-2);"><td>Total Credit Hours</td><td>126</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Program Features</h2>
+        <ul class="feature-list">
+          <li>4 years (8-semester) course designed and prescribed by TU.</li>
+          <li>Market oriented certified course such as PHP, CCNA, JAVA, Android Apps Development etc.</li>
+          <li>Regular guest lecture from highly recognized IT experts, IT entrepreneurs and reputed academicians.</li>
+          <li>College established and run by academic entrepreneurs.</li>
+          <li>Academically strong management and teachersʼ team.</li>
+          <li>Institutional association and collaboration with software companies.</li>
+          <li>Well managed library with full academic resource.</li>
+          <li>100% job placement support for deserving students.</li>
+        </ul>
+
+        <h2>Eligibility Criteria</h2>
+        <p>Minimum D+ grade in each subject of Grade 11 and 12 with CGPA 2.0 or minimum second division in 10+2 / PCL or equivalent in any discipline from a recognized board.</p>
+      </div>
+
+      <!-- SIDE INQUIRY FORM -->
+      <div>
+        <div class="side-inquiry-card reveal from-right">
+          <h3>Quick Admission Inquiry</h3>
+          <form onsubmit="alert('Thank you! We will contact you soon.'); return false;">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="Your Phone" required>
+            </div>
+            <div class="form-group">
+              <label>Program Interested</label>
+              <input type="text" value="BCA" readonly style="background:#f1f1f1;">
+            </div>
+            <div class="form-group">
+              <label>Your Message</label>
+              <textarea rows="3" placeholder="Inquire about fee, eligibility..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary" style="width:100%; border:none; cursor:pointer;">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE: NOTICES -->
+  <div id="page-notices" class="page-view">
+    <section style="padding:70px 0;">
+      <div class="wrap">
+        <h1 style="font-size:2.4rem; margin-bottom:10px;">News &amp; Notices</h1>
+        <p style="margin-bottom:40px; color:#5a6172;">Click any notice to view full details. Scroll down to continuously load more notices.</p>
+        
+        <div id="notice-container" class="notice-feed">
+          <!-- Dynamically populated via JS -->
+        </div>
+        <div id="notice-loader" class="mono" style="text-align:center; padding:30px; color:var(--code);">// Loading more notices...</div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PAGE: GALLERY -->
+  <div id="page-gallery" class="page-view">
+    <section style="padding:70px 0;">
+      <div class="wrap">
+        <div class="gallery-header">
+          <span class="mono" style="color:var(--code); font-size:0.85rem;">// CREATIVE SHOWCASE</span>
+          <h1>Campus &amp; Innovation Gallery</h1>
+          <p>A visual narrative of student projects, hackathons, guest workshops, and life inside Swastik College.</p>
+        </div>
+
+        <!-- Filter Tags -->
+        <div class="gallery-filters">
+          <button class="filter-btn active" data-filter="all">All Works</button>
+          <button class="filter-btn" data-filter="hackathons">Hackathons</button>
+          <button class="filter-btn" data-filter="workshops">Workshops</button>
+          <button class="filter-btn" data-filter="campus">Campus Life</button>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="portfolio-grid" id="portfolio-grid">
+
+          <div class="portfolio-card" data-category="hackathons" data-img="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80" data-title="National Hackathon 2025" data-desc="24-hour coding sprint solving real Fintech challenges with eSewa engineers.">
+            <div class="portfolio-thumb">
+              <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="Hackathon">
+              <div class="portfolio-zoom-badge">🔍</div>
+              <div class="portfolio-overlay">
+                <span class="portfolio-tag">Hackathons</span>
+                <div class="portfolio-title">National Hackathon 2025</div>
+                <div class="portfolio-desc">24-hour coding sprint solving Fintech challenges.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-card" data-category="workshops" data-img="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80" data-title="F1Soft Engineering Workshop" data-desc="Interactive masterclass on enterprise architecture and backend microservices.">
+            <div class="portfolio-thumb">
+              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Workshop">
+              <div class="portfolio-zoom-badge">🔍</div>
+              <div class="portfolio-overlay">
+                <span class="portfolio-tag">Workshops</span>
+                <div class="portfolio-title">F1Soft Engineering Workshop</div>
+                <div class="portfolio-desc">Masterclass on backend microservices architecture.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-card" data-category="campus" data-img="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80" data-title="UI/UX Innovation Lab" data-desc="Students designing scalable interfaces and prototyping web apps.">
+            <div class="portfolio-thumb">
+              <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" alt="UI/UX Lab">
+              <div class="portfolio-zoom-badge">🔍</div>
+              <div class="portfolio-overlay">
+                <span class="portfolio-tag">Campus Life</span>
+                <div class="portfolio-title">UI/UX Innovation Lab</div>
+                <div class="portfolio-desc">Designing modern interfaces in practical labs.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-card" data-category="workshops" data-img="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?auto=format&fit=crop&w=1200&q=80" data-title="Mobile App Development Bootcamp" data-desc="Hands-on Flutter & React Native session led by senior app developers.">
+            <div class="portfolio-thumb">
+              <img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?auto=format&fit=crop&w=800&q=80" alt="Bootcamp">
+              <div class="portfolio-zoom-badge">🔍</div>
+              <div class="portfolio-overlay">
+                <span class="portfolio-tag">Workshops</span>
+                <div class="portfolio-title">App Development Bootcamp</div>
+                <div class="portfolio-desc">Hands-on Flutter &amp; React Native training.</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PAGE: DOWNLOADS -->
+  <div id="page-downloads" class="page-view">
+    <section style="padding:70px 0;">
+      <div class="wrap" style="max-width:800px;">
+        <div class="section-head">
+          <span class="code-label">// <b>05</b> — downloads.index()</span>
+          <h2>Student downloads &amp; syllabus.</h2>
+        </div>
+        <div style="margin-top:30px; display:flex; flex-direction:column; gap:16px;">
+          <div style="background:#fff; border:1px solid var(--line); padding:20px; display:flex; justify-content:space-between; align-items:center; border-radius:6px;">
+            <div><strong>B.Sc. CSIT TU Syllabus</strong><br><span class="mono" style="font-size:0.8rem; color:#8a92a3;">PDF · 2.4 MB</span></div>
+            <a href="#" class="btn-ghost" style="padding:10px 16px;">Download</a>
+          </div>
+          <div style="background:#fff; border:1px solid var(--line); padding:20px; display:flex; justify-content:space-between; align-items:center; border-radius:6px;">
+            <div><strong>BCA Entrance Model Questions</strong><br><span class="mono" style="font-size:0.8rem; color:#8a92a3;">PDF · 1.8 MB</span></div>
+            <a href="#" class="btn-ghost" style="padding:10px 16px;">Download</a>
+          </div>
+          <div style="background:#fff; border:1px solid var(--line); padding:20px; display:flex; justify-content:space-between; align-items:center; border-radius:6px;">
+            <div><strong>College Prospectus 2025</strong><br><span class="mono" style="font-size:0.8rem; color:#8a92a3;">PDF · 5.1 MB</span></div>
+            <a href="#" class="btn-ghost" style="padding:10px 16px;">Download</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PAGE: CONTACT -->
+  <div id="page-contact" class="page-view">
+    <section style="padding:70px 0;">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="code-label">// <b>06</b> — contact.desk()</span>
+          <h2>Reach out to Admissions.</h2>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px; margin-top:30px;">
+          <div style="background:#fff; border:1px solid var(--line); padding:30px; border-radius:6px;" class="reveal from-left">
+            <h3 style="color:var(--maroon-deep); margin-bottom:10px;">Swastik College</h3>
+            <p style="margin-bottom:8px;">📍 Chardobato, Madhyapur Thimi-3, Bhaktapur, Nepal</p>
+            <p style="margin-bottom:8px;">✉️ info@swastikcollege.edu.np</p>
+            <p style="margin-bottom:8px;">📞 +977-1-6635174 / 9801123456</p>
+            <p style="margin-top:16px; font-size:0.9rem; color:#6c757d;">College Hours: Sunday – Friday (6:30 AM – 3:00 PM)</p>
+          </div>
+          <div style="background:#fff; border:1px solid var(--line); padding:30px; border-radius:6px;" class="reveal from-right">
+            <h3>Send a Message</h3>
+            <form style="display:flex; flex-direction:column; gap:12px; margin-top:14px;" onsubmit="alert('Message sent!'); return false;">
+              <input type="text" placeholder="Name" required style="padding:10px; border:1px solid var(--line); border-radius:4px; font-family:inherit;">
+              <input type="email" placeholder="Email" required style="padding:10px; border:1px solid var(--line); border-radius:4px; font-family:inherit;">
+              <textarea placeholder="Message" rows="4" required style="padding:10px; border:1px solid var(--line); border-radius:4px; font-family:inherit;"></textarea>
+              <button type="submit" class="btn-primary" style="border:none; cursor:pointer;">Send Message</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- SWASTIK COLLEGE LOCATION MAP -->
+        <div style="margin-top:50px;" class="reveal from-left">
+          <h2 style="font-size:1.6rem; margin-bottom:16px;">Our Location</h2>
+          <div style="border-radius:10px; overflow:hidden; border:1px solid var(--line); box-shadow:0 12px 30px rgba(0,0,0,0.08); background:#fff; height:420px;">
+            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Swastik%20College%20Chardobato%20Gattaghar%20Bhaktapur&t=&z=16&ie=UTF8&iwloc=&output=embed"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</main>
+
+<!-- NOTICE READING MODAL -->
+<div id="notice-modal" class="modal-overlay">
+  <div class="modal-box">
+    <button class="modal-close" id="modal-close-btn">&times;</button>
+    <div class="mono" id="modal-date" style="color:var(--code); font-size:0.82rem; margin-bottom:8px;"></div>
+    <h2 id="modal-title" style="margin-bottom:16px; color:var(--maroon-deep);"></h2>
+    <div id="modal-body" style="color:#3a4152; line-height:1.7;"></div>
+  </div>
+</div>
+
+<!-- GALLERY LIGHTBOX MODAL WITH ZOOM IN / ZOOM OUT -->
+<div id="gallery-lightbox" class="lightbox-overlay">
+  <div class="lightbox-toolbar">
+    <button class="lightbox-btn" id="zoom-out" title="Zoom Out">−</button>
+    <span class="lightbox-scale" id="zoom-scale-display">100%</span>
+    <button class="lightbox-btn" id="zoom-in" title="Zoom In">+</button>
+    <button class="lightbox-btn" id="zoom-reset" title="Reset Zoom" style="font-size:0.8rem; width:auto; border-radius:12px; padding:0 8px;">1:1</button>
+    <div style="width:1px; height:20px; background:rgba(255,255,255,0.2);"></div>
+    <button class="lightbox-btn" id="lightbox-close" title="Close Viewer">✕</button>
+  </div>
+  <div class="lightbox-viewport">
+    <div class="lightbox-img-wrap" id="lightbox-img-wrap">
+      <img id="lightbox-img" src="" alt="Zoomable Lightbox Image">
+    </div>
+  </div>
+  <div class="lightbox-caption" id="lightbox-caption"></div>
+</div>
+
+<footer>
+  <div class="wrap foot-top">
+    <div>
+      <div class="brand" style="display:flex;align-items:center;gap:12px;font-family:'Fraunces',serif;font-weight:700;font-size:1.25rem;color:var(--paper);">
+        🦢 Swastik College
+      </div>
+      <p>Chardobato, Madhyapur Thimi-3, Bhaktapur. One of the leading BCA and CSIT colleges in Nepal, affiliated to Tribhuvan University.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#notices">Notice and News</a></li>
+        <li><a href="#gallery">Photo Gallery</a></li>
+        <li><a href="#downloads">Downloads</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li>info@swastikcollege.edu.np</li>
+        <li>+977-1-6635174</li>
+        <li>Sun – Fri, 6:30 AM – 1:00 PM</li>
+        <li>Chardobato, Bhaktapur</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© Swastik College 2026. All rights reserved.</span>
+    <!--<span class="mono easter" id="easter-egg" title="try me">// built by coders, for coders</span>-->
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
