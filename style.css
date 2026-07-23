@@ -179,6 +179,7 @@
   .partners-dark h3{color:var(--paper); font-size:1.25rem; max-width:600px; font-weight:400; line-height:1.5;}
 
   /* About / Sister Cards */
+  .page-about{ margin-left: 6%; margin-right: 6%;}
   .about-block{padding:40px 0; border-bottom:1px solid var(--line);}
   .message-card{background:#fff; border:1px solid var(--line); padding:28px; border-radius:6px; margin-top:20px;}
   .sister-grid{display:grid; grid-template-columns:1fr 1fr; gap:30px; margin-left: 6%; margin-right: 6%;}
