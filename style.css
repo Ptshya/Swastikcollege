@@ -187,6 +187,53 @@
   .sister-card h3{font-size:1.2rem; margin-bottom:12px;}
   .sister-card p{color:#4a5163; font-size:0.93rem; margin-bottom:18px;}
   .sister-card .est{font-family:'IBM Plex Mono',monospace; font-size:0.75rem; color:var(--code); text-transform:uppercase; letter-spacing:.08em; margin-bottom:10px; display:block;}
+   /* --- Zigzag Overlapping Collage --- */
+  .about-collage {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+  }
+  
+  .about-collage img {
+    width: 65%; /* Leaves room for the zigzag movement */
+    aspect-ratio: 4 / 3; /* Keeps all 3 images uniform */
+    object-fit: cover;
+    border-radius: 16px; /* Rounded corners */
+    border: 6px solid var(--paper); /* Creates a clean cutout effect where they overlap */
+    box-shadow: 0 20px 40px -15px rgba(28,35,51,0.3);
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+
+  .about-collage img:hover {
+    transform: scale(1.03); /* Tiny pop effect on hover */
+    z-index: 10 !important; /* Brings hovered image to the very top */
+  }
+
+  /* 1st image: Top Left */
+  .about-collage .img-1 {
+    align-self: flex-start;
+    z-index: 1;
+  }
+
+  /* 2nd image: Middle Right, overlapping upward */
+  .about-collage .img-2 {
+    align-self: flex-end;
+    margin-top: -22%; /* This controls how much it overlaps the first image */
+    z-index: 2;
+  }
+
+  /* 3rd image: Bottom Left, overlapping upward */
+  .about-collage .img-3 {
+    align-self: flex-start;
+    margin-left: 5%; /* Pushed slightly right so it's not perfectly in line with the 1st */
+    margin-top: -22%; /* Overlaps the second image */
+    z-index: 3;
+  }
+
+
 
   /* Programs Cards */
   .programs{padding:90px 0; background:#fff;}
