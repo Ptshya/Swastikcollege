@@ -17,8 +17,28 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  window.addEventListener('hashchange', navigate);
+ window.addEventListener('hashchange', navigate);
   window.addEventListener('DOMContentLoaded', navigate);
+
+  // --- Mobile Menu Toggle ---
+  const mobileBtn = document.getElementById('mobile-menu-btn');
+  const navLinksMenu = document.querySelector('.navlinks');
+
+  if (mobileBtn && navLinksMenu) {
+    // Toggle the menu open/closed when the hamburger button is clicked
+    mobileBtn.addEventListener('click', () => {
+      navLinksMenu.classList.toggle('active');
+    });
+
+    // Automatically close the dropdown menu when a link is clicked
+    navLinksMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinksMenu.classList.remove('active');
+      });
+    });
+  }
+
+  // --- Scroll Progress Bar ---
 
   // --- Scroll Progress Bar ---
   window.addEventListener('scroll', () => {
