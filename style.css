@@ -55,7 +55,7 @@
   .brand{display:flex; align-items:center; gap:12px; font-family:'Fraunces',serif; font-weight:700; font-size:1.25rem; color:var(--maroon); position:relative;}
   .brand.glitch:hover span{animation:glitch 0.35s steps(2) 2;}
 .brand img {
-    max-height: 40px; /* Change this number to make it bigger or smaller */
+    max-height: 240px; /* Change this number to make it bigger or smaller */
     width: auto;      /* Keeps the image from stretching out of proportion */
   }
   @keyframes glitch{
