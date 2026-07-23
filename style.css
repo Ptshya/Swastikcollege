@@ -303,14 +303,49 @@
     margin-right: 6%;
   }
 
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;   /* stack into one column */
-    text-align: center;           /* optional: center text */
-    gap: 24px;                    /* reduce spacing */
-    .tour-grid, .program-detail-layout, .foot-top, .prog-grid, .sister-grid{grid-template-columns:1fr;}
-    .hero-inner{grid-template-columns:1fr;}
-    .why-grid{grid-template-columns:1fr 1fr;}
-    .side-inquiry-card{position:static; margin-top:30px;}
-    .navlinks{display:none;
+@media (max-width: 768px) {
+    /* Your existing mobile layout rules */
+    .tour-grid, .program-detail-layout, .foot-top, .prog-grid, .sister-grid { grid-template-columns: 1fr; }
+    .hero-inner { grid-template-columns: 1fr; }
+    .why-grid { grid-template-columns: 1fr 1fr; }
+    .side-inquiry-card { position: static; margin-top: 30px; }
+    
+    /* Show the hamburger menu button on small screens */
+    #mobile-menu-btn {
+      display: block !important;
+    }
+    
+    /* Convert the hidden navlinks into a dropdown menu */
+    .navlinks {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 74px; /* Starts exactly where the navbar ends */
+      left: 0;
+      width: 100%;
+      background: rgba(250,245,236,0.98);
+      backdrop-filter: blur(10px);
+      padding: 0;
+      border-bottom: 1px solid var(--line);
+      box-shadow: 0 15px 30px -15px rgba(28,35,51,0.2);
+      
+      /* Animation logic */
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+    
+    /* What happens when the menu is toggled open via JavaScript */
+    .navlinks.active {
+      max-height: 400px;
+      padding: 24px 0;
+    }
+    
+    /* Style and center the links for mobile readability */
+    .navlinks a {
+      text-align: center;
+      font-size: 1.1rem;
+      padding: 12px 0;
+    }
   }
 
