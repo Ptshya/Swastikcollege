@@ -19,19 +19,6 @@
 
   window.addEventListener('hashchange', navigate);
   window.addEventListener('DOMContentLoaded', navigate);
-  
-  // --- Responsive Dynamic Nav Menu ---
-  const menuToggle = document.getElementById('menu-toggle');
-  const navMenu = document.getElementById('nav-menu');
-  if(menuToggle && navMenu) {
-    menuToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('open');
-    });
-    // Auto-close menu when a link is clicked
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-      link.addEventListener('click', () => navMenu.classList.remove('open'));
-    });
-  }
 
   // --- Scroll Progress Bar ---
   window.addEventListener('scroll', () => {
@@ -72,8 +59,7 @@
   const counters = document.querySelectorAll('.counter');
   const cio = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-
-                       if(entry.isIntersecting){
+      if(entry.isIntersecting){
         const el = entry.target;
         const target = parseInt(el.dataset.target, 10);
         const suffix = el.dataset.suffix || '';
@@ -102,6 +88,7 @@
     });
     card.addEventListener('mouseleave', () => { card.style.transform = ''; });
   });
+
   // --- Terminal Interactions ---
   const termOutput = document.getElementById('term-output');
   const termInput = document.getElementById('term-input');
@@ -123,7 +110,7 @@
         if(!cmdRaw) return;
         const cmd = cmdRaw.toLowerCase();
         const line = document.createElement('div');
-        line.innerHTML = `<span class="prompt">$</span> ${cmdRaw.replace(/</g,'<')}`;
+        line.innerHTML = `<span class="prompt">$</span> ${cmdRaw.replace(/</g,'&lt;')}`;
         termOutput.appendChild(line);
         
         if(cmd === 'clear'){
