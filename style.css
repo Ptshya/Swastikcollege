@@ -57,6 +57,8 @@
 .brand img {
     max-height: 240px; /* Change this number to make it bigger or smaller */
     width: auto;      /* Keeps the image from stretching out of proportion */
+    display: flex;
+  align-items: center;
   }
   @keyframes glitch{
     0%{ text-shadow: 2px 0 var(--code), -2px 0 var(--maroon-bright); transform:translate(0,0);}
