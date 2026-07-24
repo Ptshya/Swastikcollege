@@ -432,7 +432,7 @@
       <div class="wrap">
         <div class="gallery-header">
           <span class="mono" style="color:var(--code); font-size:0.85rem;">// CREATIVE SHOWCASE</span>
-          <h1>Campus &amp; Innovation Gallery</h1>
+          <h1 style="margin-left: 6%;">Campus &amp; Innovation Gallery</h1>
           <p>A visual narrative of student projects, hackathons, guest workshops, and life inside Swastik College.</p>
         </div>
 
@@ -544,42 +544,49 @@
 
   <!-- PAGE: CONTACT -->
   <div id="page-contact" class="page-view">
-    <section style="padding:70px 0;">
-      <div class="wrap">
+    <div class="wrap">
+      
+      <!-- MASTER CENTERED CONTAINER -->
+      <div style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+        
+        <!-- HEADINGS (Untouched) -->
         <div class="section-head">
           <span class="code-label">// <b>06</b> — contact.desk()</span>
           <h2>Reach out to Admissions.</h2>
         </div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px; margin-top:30px;">
-          <div style="background:#fff; border:1px solid var(--line); padding:30px; border-radius:6px;" class="reveal from-left">
-            <h3 style="color:var(--maroon-deep); margin-bottom:10px;">Swastik College</h3>
-            <p style="margin-bottom:8px;">📍 Chardobato, Madhyapur Thimi-3, Bhaktapur, Nepal</p>
-            <p style="margin-bottom:8px;">✉️ info@swastikcollege.edu.np</p>
-            <p style="margin-bottom:8px;">📞 +977-1-6635174 / 9801123456</p>
-            <p style="margin-top:16px; font-size:0.9rem; color:#6c757d;">College Hours: Sunday – Friday (6:30 AM – 3:00 PM)</p>
-          </div>
+
+        <!-- GRID FOR DATA & FORM -->
+        <!-- Changed to auto-fit so it stacks perfectly on mobile devices -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 30px;">
+          
+          <!-- Swastik College Data -->
+
+          
+          <!-- Contact Form -->
           <div style="background:#fff; border:1px solid var(--line); padding:30px; border-radius:6px;" class="reveal from-right">
-            <h3>Send a Message</h3>
+            <h3>Send a Message</h3> <br>
             <form style="display:flex; flex-direction:column; gap:12px; margin-top:14px;" onsubmit="alert('Message sent!'); return false;">
               <input type="text" placeholder="Name" required style="padding:10px; border:1px solid var(--line); border-radius:4px; font-family:inherit;">
               <input type="email" placeholder="Email" required style="padding:10px; border:1px solid var(--line); border-radius:4px; font-family:inherit;">
               <textarea placeholder="Message" rows="4" required style="padding:10px; border:1px solid var(--line); border-radius:4px; font-family:inherit;"></textarea>
-              <button type="submit" class="btn-primary" style="border:none; cursor:pointer;">Send Message</button>
+              <button type="submit" class="btn-primary" style="border:none; cursor:pointer; padding: 10px; border-radius: 4px;">Send Message</button>
             </form>
           </div>
+
         </div>
 
         <!-- SWASTIK COLLEGE LOCATION MAP -->
-        <div style="margin-top:50px;" class="reveal from-left">
-          <h2 style="font-size:1.6rem; margin-bottom:16px;">Our Location</h2>
-          <div style="border-radius:10px; overflow:hidden; border:1px solid var(--line); box-shadow:0 12px 30px rgba(0,0,0,0.08); background:#fff; height:420px;">
+        <section style="margin-top:50px;" class="reveal from-left">
+          
+          <div style="border-radius:10px; overflow:hidden; border:1px solid var(--line); box-shadow:0 12px 30px rgba(0,0,0,0.08); background:#fff; height:420px; width: 100%;">
             <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Swastik%20College%20Chardobato%20Gattaghar%20Bhaktapur&t=&z=16&ie=UTF8&iwloc=&output=embed"></iframe>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
+<br>
+      </div> <!-- /MASTER CENTERED CONTAINER -->
+      
+    </div>
   </div>
-
 </main>
 
 <!-- NOTICE READING MODAL -->
