@@ -13,21 +13,23 @@
 <div class="ring" id="ring"></div>
 
 
-<!-- NAVIGATION -->
-<nav>
-  <div class="wrap">
-    <a href="#home" class="brand glitch"><span>🦢 Swastik College</span></a>
-    <div class="navlinks">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#programs">Programs</a>
-      <a href="#notices">Notices</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#downloads">Downloads</a>
-      <a href="#contact">Contact</a>
+<!-- NAVIGATION WITH INLINE STYLES -->
+<nav style="position: sticky; top: 0; left: 0; width: 100%; background: #ffffff; border-bottom: 1px solid var(--line, #e2e8f0); z-index: 1000; padding: 12px 0;">
+  <div class="wrap" style="display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    <a href="#home" class="brand glitch" style="font-size: 1.25rem; font-weight: 700; color: #1e293b; text-decoration: none; display: flex; align-items: center; gap: 8px;">
+      <span>🦢 Swastik College</span>
+    </a>
+    <div class="navlinks" style="display: flex; align-items: center; gap: 24px;">
+      <a href="#home" style="text-decoration: none; color: #475569; font-weight: 500; font-size: 0.95rem; transition: color 0.2s;">Home</a>
+      <a href="#about" style="text-decoration: none; color: #475569; font-weight: 500; font-size: 0.95rem; transition: color 0.2s;">About</a>
+      <a href="#programs" style="text-decoration: none; color: #475569; font-weight: 500; font-size: 0.95rem; transition: color 0.2s;">Programs</a>
+      <a href="#notices" style="text-decoration: none; color: #475569; font-weight: 500; font-size: 0.95rem; transition: color 0.2s;">Notices</a>
+      <a href="#gallery" style="text-decoration: none; color: #475569; font-weight: 500; font-size: 0.95rem; transition: color 0.2s;">Gallery</a>
+      <a href="#downloads" style="text-decoration: none; color: #475569; font-weight: 500; font-size: 0.95rem; transition: color 0.2s;">Downloads</a>
+      <a href="#contact" style="text-decoration: none; color: #475569; font-weight: 500; font-size: 0.95rem; transition: color 0.2s;">Contact</a>
     </div>
-    <div class="nav-right">
-      <button id="hack-toggle" class="mono" title="Toggle hack mode">hack_mode</button>
+    <div class="nav-right" style="display: flex; align-items: center;">
+      <button id="hack-toggle" class="mono" title="Toggle hack mode" style="background: #0f172a; color: #38bdf8; border: 1px solid #334155; padding: 6px 14px; border-radius: 4px; font-family: monospace; font-size: 0.85rem; cursor: pointer; transition: all 0.2s;">hack_mode</button>
     </div>
   </div>
 </nav>
