@@ -17,7 +17,7 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
- window.addEventListener('hashchange', navigate);
+  window.addEventListener('hashchange', navigate);
   window.addEventListener('DOMContentLoaded', navigate);
 
   // --- Mobile Menu Toggle ---
@@ -37,8 +37,6 @@
       });
     });
   }
-
-  // --- Scroll Progress Bar ---
 
   // --- Scroll Progress Bar ---
   window.addEventListener('scroll', () => {
@@ -104,7 +102,7 @@
       const r = card.getBoundingClientRect();
       const x = (e.clientX - r.left) / r.width - 0.5;
       const y = (e.clientY - r.top) / r.height - 0.5;
-      card.style.transform = `perspective(800px) rotateY(${x*6}deg) rotateX(${-y*6}deg) translateY(-4px)`;
+      card.style.transform = `perspective(800px) rotateY(${x * 6}deg) rotateX(${-y * 6}deg) translateY(-4px)`;
     });
     card.addEventListener('mouseleave', () => { card.style.transform = ''; });
   });
@@ -278,12 +276,14 @@
   const canvas = document.getElementById('matrix-canvas');
   const ctx = canvas.getContext('2d');
   let w, h, cols, drops;
+
   function sizeCanvas(){
     w = canvas.width = window.innerWidth;
     h = canvas.height = window.innerHeight;
     cols = Math.floor(w / 16);
     drops = new Array(cols).fill(0);
   }
+
   sizeCanvas();
   window.addEventListener('resize', sizeCanvas);
   const chars = 'アイウエオカキクケコ01<>{}/;=SWASTIK';
@@ -296,9 +296,9 @@
       ctx.fillStyle = '#2E8B6F';
       ctx.font = '14px monospace';
       drops.forEach((y, i) => {
-        const text = chars[Math.floor(Math.random()*chars.length)];
-        ctx.fillText(text, i*16, y*16);
-        if(y*16 > h && Math.random() > 0.975) drops[i] = 0;
+        const text = chars[Math.floor(Math.random() * chars.length)];
+        ctx.fillText(text, i * 16, y * 16);
+        if(y * 16 > h && Math.random() > 0.975) drops[i] = 0;
         drops[i]++;
       });
     }
