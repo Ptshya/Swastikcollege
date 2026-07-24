@@ -1,28 +1,5 @@
   @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
-/* Responsive adjustments for Tablets */
-@media (max-width: 900px) {
-  .wrap {
-    margin: 0 4%; /* Shrinks margin to 4% to give content more room */
-  }
-}
-
-/* Responsive adjustments for Smartphones */
-@media (max-width: 600px) {
-  .wrap {
-    margin: 0 16px; /* Uses a fixed 16px margin so it never gets too narrow */
-  }
-  
-  /* Optional: Make sure tables don't break the screen width */
-  .program-main-content {
-    overflow-x: auto; 
-  }
-  
-  .styled-table {
-    min-width: 500px; /* Forces table to scroll sideways instead of squishing */
-  }
-}
-
   :root{
     --maroon:#7E1F3A;
     --maroon-deep:#4E1224;
@@ -336,5 +313,4 @@
     .side-inquiry-card{position:static; margin-top:30px;}
     .navlinks{display:none;
   }
-
 
